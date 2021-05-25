@@ -16,7 +16,7 @@ namespace Exercise05
         {
             SolidColorBrush brush = new SolidColorBrush(Colors.Black);
 
-            DrawLogo(paperCanvas, brush, 20, 20);
+            DrawLogo(paperCanvas, brush, 10, 20);
             DrawLogo(paperCanvas, brush, 100, 100);
             DrawTriangle2(paperCanvas, brush, 100, 10, 40, 40);
             DrawTriangle2(paperCanvas, brush, 10, 100, 20, 60);
