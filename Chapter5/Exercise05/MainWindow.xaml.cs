@@ -20,6 +20,7 @@ namespace Exercise05
             DrawLogo(paperCanvas, brush, 100, 100);
             DrawTriangle2(paperCanvas, brush, 100, 10, 40, 40);
             DrawTriangle2(paperCanvas, brush, 10, 100, 20, 60);
+            DrawTriangle2(paperCanvas, brush, 150, 150, 50, 50);
         }
 
         private void DrawTriangle2(Canvas drawingArea,
@@ -29,6 +30,17 @@ namespace Exercise05
                                    double width,
                                    double height)
         {
+            Polygon myPolygon = new Polygon();
+            myPolygon.Stroke = brushToUse;
+            Point Point1 = new Point(xPlace, yPlace);
+            Point Point2 = new Point(yPlace, xPlace);
+            Point Point3 = new Point(width, height);
+            PointCollection myPointCollection = new PointCollection();
+            myPointCollection.Add(Point1);
+            myPointCollection.Add(Point2);
+            myPointCollection.Add(Point3);
+            myPolygon.Points = myPointCollection;
+            drawingArea.Children.Add(myPolygon);
             //TODO
         }
 
