@@ -27,11 +27,29 @@ namespace Exercise15
 
         private void convertButton_Click(object sender, RoutedEventArgs e)
         {
+            
             // TODO: read input from secondsTextBox
 
             // TODO: convert with one method
 
             // TODO: show output in messagebox
+        }
+
+        private void convertButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            int seconden = Convert.ToInt32(secondsTextBox.Text);
+            int u, m, s;
+            ConvertSecondsToHoursMinutesSeconds(seconden, out u, out m, out s);
+            MessageBox.Show(String.Format("U: {0} M: {1} S: {2}", u, m, s));
+        }
+
+        private void ConvertSecondsToHoursMinutesSeconds(int seconden, out int u,  out int m, out int s)
+        {
+            u = seconden / 3600;
+            seconden = seconden % 3600;
+            m = seconden / 60;
+            s = seconden % 60;
+
         }
     }
 }
