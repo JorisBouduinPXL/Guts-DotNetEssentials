@@ -7,6 +7,18 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <TextBlock HorizontalAlignment="Left" Margin="20,20,0,0"
+    		Text="Geef decimaal getal:" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="142,19,0,0"
+    		x:Name="numberTextBox" VerticalAlignment="Top" Width="120"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="20,75,0,0"
+                   Background="AliceBlue" VerticalAlignment="Top" Width="242"
+                   Height="30" FontSize="22" TextAlignment="Center"
+                   Name="binTextBlock"/>
+
+        <Button Content="Converteer" HorizontalAlignment="Left" Margin="142,144,0,0"
+    		VerticalAlignment="Top" Width="120"
+    		x:Name="convertButton" Click="convert_Click"/>
     </Grid>
 </Window>
